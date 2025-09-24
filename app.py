@@ -1,15 +1,15 @@
 #importing the necessary libraries
+#importing the necessary libraries
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
-#creating the streamlit app
-st.title("COVID-19 Research Papers Explorer")
-st.write("This app lets you explore metadata from COVID-19 related publications.")
+#importing the subset data
+df = pd.read_csv("metadata_subset.csv")
 
-#importing the data but limiting it to 5000 rows because its large
-df = pd.read_csv("metadata.csv", nrows=5000)
+#previewing the data
+df.head()
 
 #dropping all columns where all 5000 rows have missing values
 df_cleaned = df.dropna(axis=1, how="all").copy()
@@ -28,6 +28,11 @@ df_cleaned['abstract_word_count'] = (
     .astype(str)          
     .apply(lambda x: len(x.split()))
 )
+
+#creating the streamlit app
+st.title("COVID-19 Research Papers Explorer")
+st.write("This app lets you explore metadata from COVID-19 related publications.")
+
 
 # Sidebar Widgets
 st.sidebar.header("Filters")
