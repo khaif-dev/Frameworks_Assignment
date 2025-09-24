@@ -3,7 +3,7 @@
 A simple data analysis and visualization project exploring COVID-19 related research papers metadata. The project uses **Python (Pandas, Matplotlib)** for analysis and **Streamlit** for building an interactive app.
 
 ##  Project Overview
-
+Check out the deployed Streamlit app here: [COVID-19 Research Papers Explorer](https://frameworksassignment-crsubklkeugcpjne2p4x4m.streamlit.app/)
 This project analyzes metadata from COVID-19 research papers, focusing on:
 * Cleaning missing values.
 * Extracting publication dates and years.
@@ -12,8 +12,6 @@ This project analyzes metadata from COVID-19 research papers, focusing on:
 * Building an interactive **Streamlit dashboard**
 
 ## 📂 Dataset
-<p style="color:red;"><b>⚠️ Disclaimer:</b> This repo does not contain the metadata.csv file because of its size.</p>
-
 
 * **Source:** [CORD-19 Research Challenge (Kaggle)](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge)
 * **File used:** `metadata.csv` (subset of 5000 rows for efficiency)
@@ -78,7 +76,7 @@ streamlit run app.py
    * Bar chart of top journals
    * Word cloud of paper titles
 
-## 🖼️ Example visuals in streamlit.pdf
+## 🖼️ Example visuals in the streamlit app
 
 * 📈 Publications over time
 * 🏛 Top journals publishing COVID-19 research
@@ -88,7 +86,6 @@ streamlit run app.py
 ## 📌 Future Improvements
 
 * Add interactive filtering by journal, country, or author.
-* Use NLP techniques to analyze abstracts.
 * Incorporate more recent versions of the dataset.
-* add streamlit deployment link when I figure out how do go about the data file size 
+
 
